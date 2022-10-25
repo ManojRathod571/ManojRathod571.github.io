@@ -1,14 +1,19 @@
-import { Box, Flex } from "@chakra-ui/react";
-import Hero from "./component/Hero";
-import Navbar from "./component/Navbar";
+import "./App.css";
+import { Box } from "@chakra-ui/react";
+import Navbar from "./Navbar/Navbar";
+import Hero from "./pages/Hero";
+import About from "./pages/About";
+import AllRoutes from "./pages/AllRoutes";
+import Education from "./pages/Education";
 
 function App() {
   return (
     <Box>
       <Navbar />
-      <Flex h="100vh" justify="center">
-        <Hero />
-      </Flex>
+      {/* <AllRoutes /> */}
+      <Hero />
+      <About />
+      <Education />
     </Box>
   );
 }
