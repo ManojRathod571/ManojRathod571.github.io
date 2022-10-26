@@ -5,6 +5,8 @@ import Hero from "./pages/Hero";
 import About from "./pages/About";
 import AllRoutes from "./pages/AllRoutes";
 import Education from "./pages/Education";
+import Skills from "./pages/Skills";
+import Projects from "./pages/Projects";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Hero />
       <About />
       <Education />
+      <Skills />
+      <Projects />
     </Box>
   );
 }
