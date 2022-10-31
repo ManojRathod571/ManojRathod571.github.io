@@ -2,6 +2,7 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { GiGraduateCap } from "react-icons/gi";
 import { BsCalendarDate } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 const EducationSection = () => {
   return (
@@ -25,66 +26,122 @@ const EducationSection = () => {
         <Text fontSize="22px" fontWeight="500" fontFamily="Poppins">
           Full Stack Web Development(Full Time)
         </Text>
-        <Text fontSize="16px" fontWeight="400" fontFamily="Poppins">
-          @ Masai School, Bangalore
-        </Text>
-        <Flex>
-          <Flex align={"center"} mr="1.5rem">
-            <BsCalendarDate color="blue" />
-          </Flex>
+        <motion.div
+          initial={{
+            x: 150,
+            opacity: 0,
+          }}
+          transition={{
+            duration: 0.9,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+          }}
+        >
           <Text fontSize="16px" fontWeight="400" fontFamily="Poppins">
-            05/19 <span style={{ fontStyle: "italic" }}>to </span> present /
-            Remote
+            @ Masai School, Bangalore
           </Text>
-        </Flex>
+          <Flex>
+            <Flex align={"center"} mr="1.5rem">
+              <BsCalendarDate color="blue" />
+            </Flex>
+            <Text fontSize="16px" fontWeight="400" fontFamily="Poppins">
+              05/19 <span style={{ fontStyle: "italic" }}>to </span> present /
+              Remote
+            </Text>
+          </Flex>
+        </motion.div>
       </Box>
       <Box pt="1.5rem">
         <Text fontSize="22px" fontWeight="500" fontFamily="Poppins">
           Master Of Computer Application (MCA)
         </Text>
-        <Text fontSize="16px" fontWeight="400" fontFamily="Poppins">
-          @ Government College of Engineering, Karad
-        </Text>
-        <Flex>
-          <Flex align={"center"} mr="1.5rem">
-            <BsCalendarDate color="blue" />
-          </Flex>
+        <motion.div
+          initial={{
+            x: 150,
+            opacity: 0,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+          }}
+        >
           <Text fontSize="16px" fontWeight="400" fontFamily="Poppins">
-            07/2015 <span style={{ fontStyle: "italic" }}>to </span> 04/2018
+            @ Government College of Engineering, Karad
           </Text>
-        </Flex>
+          <Flex>
+            <Flex align={"center"} mr="1.5rem">
+              <BsCalendarDate color="blue" />
+            </Flex>
+            <Text fontSize="16px" fontWeight="400" fontFamily="Poppins">
+              07/2015 <span style={{ fontStyle: "italic" }}>to </span> 04/2018
+            </Text>
+          </Flex>
+        </motion.div>
       </Box>
       <Box pt="1.5rem">
         <Text fontSize="22px" fontWeight="500" fontFamily="Poppins">
           Bachlor Of Computer Application (BCA)
         </Text>
-        <Text fontSize="16px" fontWeight="400" fontFamily="Poppins">
-          @ KBP, Urun Islampur
-        </Text>
-        <Flex>
-          <Flex align={"center"} mr="1.5rem">
-            <BsCalendarDate color="blue" />
-          </Flex>
+        <motion.div
+          initial={{
+            x: 150,
+            opacity: 0,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+          }}
+        >
           <Text fontSize="16px" fontWeight="400" fontFamily="Poppins">
-            07/2012 <span style={{ fontStyle: "italic" }}>to </span> 06/2015
+            @ KBP, Urun Islampur
           </Text>
-        </Flex>
+          <Flex>
+            <Flex align={"center"} mr="1.5rem">
+              <BsCalendarDate color="blue" />
+            </Flex>
+            <Text fontSize="16px" fontWeight="400" fontFamily="Poppins">
+              07/2012 <span style={{ fontStyle: "italic" }}>to </span> 06/2015
+            </Text>
+          </Flex>
+        </motion.div>
       </Box>
       <Box pt="1.5rem">
         <Text fontSize="22px" fontWeight="500" fontFamily="Poppins">
           Higher Secondary Education
         </Text>
-        <Text fontSize="16px" fontWeight="400" fontFamily="Poppins">
-          @ Baba Patil Junior College, Aitwade Khurd
-        </Text>
-        <Flex>
-          <Flex align={"center"} mr="1.5rem">
-            <BsCalendarDate color="blue" />
-          </Flex>
+        <motion.div
+          initial={{
+            x: 150,
+            opacity: 0,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+          }}
+        >
           <Text fontSize="16px" fontWeight="400" fontFamily="Poppins">
-            07/2012 <span style={{ fontStyle: "italic" }}>to </span> 06/2015
+            @ Baba Patil Junior College, Aitwade Khurd
           </Text>
-        </Flex>
+          <Flex>
+            <Flex align={"center"} mr="1.5rem">
+              <BsCalendarDate color="blue" />
+            </Flex>
+            <Text fontSize="16px" fontWeight="400" fontFamily="Poppins">
+              07/2012 <span style={{ fontStyle: "italic" }}>to </span> 06/2015
+            </Text>
+          </Flex>
+        </motion.div>
       </Box>
     </>
   );

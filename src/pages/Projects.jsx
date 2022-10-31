@@ -1,6 +1,7 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { FaProjectDiagram } from "react-icons/fa";
+import ProjectLeftSection from "../component/ProjectLeftSection";
 
 const Projects = () => {
   return (
@@ -17,6 +18,8 @@ const Projects = () => {
         >
           Projects
         </Text>
+
+        {/* <ProjectLeftSection /> */}
       </Box>
     </Box>
   );
