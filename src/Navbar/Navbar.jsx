@@ -4,7 +4,7 @@ import {
   Flex,
   Avatar,
   HStack,
-  Link,
+  // Link,
   IconButton,
   Button,
   Menu,
@@ -20,7 +20,8 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { Navigate, NavLink } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Links = ["Dashboard", "Projects", "Team"];
 
@@ -89,46 +90,56 @@ export default function Navbar() {
           </HStack>
           <Box display={{ base: "none", md: "block" }} w="50%" m="auto">
             <Flex direction={"row"} justifyContent="space-between">
-              <Text
-                color={"white"}
-                fontWeight="600"
-                fontSize="md"
-                fontFamily="Poppins"
-              >
-                Home
-              </Text>
-              <Text
-                color={"white"}
-                fontWeight="600"
-                fontSize="md"
-                fontFamily="Poppins"
-              >
-                About
-              </Text>
-              <Text
-                color={"white"}
-                fontWeight="600"
-                fontSize="md"
-                fontFamily="Poppins"
-              >
-                Skills
-              </Text>
-              <Text
-                color={"white"}
-                fontWeight="600"
-                fontSize="md"
-                fontFamily="Poppins"
-              >
-                Project
-              </Text>
-              <Text
-                color={"white"}
-                fontWeight="600"
-                fontSize="md"
-                fontFamily="Poppins"
-              >
-                Contact
-              </Text>
+              <AnchorLink href="#hero">
+                <Text
+                  color={"white"}
+                  fontWeight="600"
+                  fontSize="md"
+                  fontFamily="Poppins"
+                >
+                  Home
+                </Text>
+              </AnchorLink>
+              <AnchorLink href="#about">
+                <Text
+                  color={"white"}
+                  fontWeight="600"
+                  fontSize="md"
+                  fontFamily="Poppins"
+                >
+                  About
+                </Text>
+              </AnchorLink>
+              <AnchorLink href="#Skills">
+                <Text
+                  color={"white"}
+                  fontWeight="600"
+                  fontSize="md"
+                  fontFamily="Poppins"
+                >
+                  Skills
+                </Text>
+              </AnchorLink>
+              <AnchorLink href="#project">
+                <Text
+                  color={"white"}
+                  fontWeight="600"
+                  fontSize="md"
+                  fontFamily="Poppins"
+                >
+                  Project
+                </Text>
+              </AnchorLink>
+              <AnchorLink href="#">
+                <Text
+                  color={"white"}
+                  fontWeight="600"
+                  fontSize="md"
+                  fontFamily="Poppins"
+                >
+                  Contact
+                </Text>
+              </AnchorLink>
             </Flex>
           </Box>
           <Flex alignItems={"center"}>

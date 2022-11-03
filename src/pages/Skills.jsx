@@ -33,15 +33,17 @@ let array = [
 
 const Skills = () => {
   return (
-    <Grid bg="#6929c4" py="1rem" align="center">
+    <Grid bg="#B0E0E6" py="1rem" align="center" id="Skills">
       <Box
         py="3rem"
         bg="radial-gradient(circle farthest-corner at 50% 50%,#7738d6 49%,rgba(28,0,71,.48))"
         w="50%"
         h="auto"
         border="2px solid"
-        borderColor="whiteAlpha.300"
+        borderColor="gray.500"
         borderRadius="50%"
+        // boxShadow="rgba(0, 0, 0, 0.56) 0px 22px 70px 4px"
+        boxShadow="rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px"
         ml="25%"
       >
         <Flex justify="center">

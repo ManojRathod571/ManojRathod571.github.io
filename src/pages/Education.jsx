@@ -6,7 +6,7 @@ import { GiCapitol } from "react-icons/gi";
 
 const Education = () => {
   return (
-    <Box w="85%" m="auto" py="4rem">
+    <Box w="85%" m="auto" py="4rem" id="Education">
       <Box position="Absolute" left="30%" zIndex="-50">
         <GiCapitol color="rgb(245, 245, 245)" fontSize={"35rem"} />
       </Box>

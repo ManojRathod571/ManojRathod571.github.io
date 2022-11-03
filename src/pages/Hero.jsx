@@ -10,8 +10,8 @@ import HeroLeftSection from "../component/HeroLeftSection";
 const Hero = () => {
   return (
     <>
-      <Box h="91vh" bg="#6929c4" color={"white"} fontFamily="Poppins">
-        <Grid templateColumns="1fr .6fr" w="85%" margin={"auto"} pt="1rem">
+      <Box h="91vh" bg="#6929c4" color={"white"} fontFamily="Poppins" id="hero">
+        <Grid templateColumns="1fr .7fr" w="90%" margin={"auto"} pt="1rem">
           <HeroRightSection />
           <HeroLeftSection />
         </Grid>

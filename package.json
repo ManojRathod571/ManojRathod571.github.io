@@ -14,12 +14,18 @@
     "framer-motion": "^7.5.3",
     "lottie-web": "^5.9.6",
     "react": "^18.2.0",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^18.2.0",
+    "react-github-calendar": "^3.3.4",
     "react-icons": "^4.6.0",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
     "react-simple-typewriter": "^4.0.5",
+    "react-slick": "^0.29.0",
     "react-social-icons": "^5.15.0",
+    "react-tooltip": "^4.4.3",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

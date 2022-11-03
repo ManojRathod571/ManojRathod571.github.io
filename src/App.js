@@ -7,6 +7,11 @@ import AllRoutes from "./pages/AllRoutes";
 import Education from "./pages/Education";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
+import Calender from "./component/GitHubStat";
+import Stats from "./component/GitHubStrik";
+import GitHub from "./pages/GitHub";
+import Contact from "./pages/Contact";
+import Footer from "./Footer/Footer";
 
 function App() {
   return (
@@ -18,6 +23,9 @@ function App() {
       <Education />
       <Skills />
       <Projects />
+      <GitHub />
+      <Contact />
+      <Footer />
     </Box>
   );
 }

@@ -28,11 +28,11 @@ const EducationSection = () => {
         </Text>
         <motion.div
           initial={{
-            x: 150,
+            // x: 150,
             opacity: 0,
           }}
           transition={{
-            duration: 0.9,
+            duration: 1,
           }}
           whileInView={{
             opacity: 1,
@@ -59,11 +59,11 @@ const EducationSection = () => {
         </Text>
         <motion.div
           initial={{
-            x: 150,
+            // x: 150,
             opacity: 0,
           }}
           transition={{
-            duration: 0.7,
+            duration: 1,
           }}
           whileInView={{
             opacity: 1,
@@ -89,11 +89,11 @@ const EducationSection = () => {
         </Text>
         <motion.div
           initial={{
-            x: 150,
+            // x: 150,
             opacity: 0,
           }}
           transition={{
-            duration: 0.7,
+            duration: 1,
           }}
           whileInView={{
             opacity: 1,
@@ -119,11 +119,11 @@ const EducationSection = () => {
         </Text>
         <motion.div
           initial={{
-            x: 150,
+            // x: 150,
             opacity: 0,
           }}
           transition={{
-            duration: 0.7,
+            duration: 1,
           }}
           whileInView={{
             opacity: 1,
