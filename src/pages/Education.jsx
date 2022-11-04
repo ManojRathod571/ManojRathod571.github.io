@@ -3,6 +3,7 @@ import React from "react";
 import EducationSection from "../component/EducationSection";
 import ExperienceSection from "../component/ExperienceSection";
 import { GiCapitol } from "react-icons/gi";
+import { motion } from "framer-motion";
 
 const Education = () => {
   return (

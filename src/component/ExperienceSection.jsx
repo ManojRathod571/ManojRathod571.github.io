@@ -26,11 +26,11 @@ const ExperienceSection = () => {
         </Text>
         <motion.div
           initial={{
-            // x: -150,
+            x: -150,
             opacity: 0,
           }}
           transition={{
-            duration: 1,
+            duration: 0.9,
           }}
           whileInView={{
             opacity: 1,
@@ -143,7 +143,7 @@ const ExperienceSection = () => {
         </Text>
         <motion.div
           initial={{
-            // x: -150,
+            x: -100,
             opacity: 0,
           }}
           transition={{

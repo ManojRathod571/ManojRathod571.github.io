@@ -48,7 +48,7 @@ export default function Navbar() {
 
   const changeNavbarBg = () => {
     console.log(window.scrollY);
-    if (window.scrollY >= 1100) {
+    if (window.scrollY >= 650) {
       setNavbar(true);
     } else {
       setNavbar(false);
@@ -59,7 +59,15 @@ export default function Navbar() {
 
   return (
     <>
-      <Box bg="#6929c4" px={4} position="sticky" zIndex={100} top="0">
+      <Box
+        bg={navbar ? "white" : "#6929c4"}
+        px={4}
+        position="sticky"
+        zIndex={100}
+        top="0"
+        boxShadow={navbar ? "rgba(0, 0, 0, 0.1) 0px 4px 12px" : null}
+        // boxShadow={navbar ? "rgba(0, 0, 0, 0.16) 0px 1px 2px" : null}
+      >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}
@@ -73,7 +81,7 @@ export default function Navbar() {
             alignItems={"center"}
             display={{ base: "none", md: "block" }}
           >
-            <Flex color={"white"}>
+            <Flex color={"black"}>
               <Image
                 src="https://i.postimg.cc/kXkJm1sG/final-logo-removebg-preview.png"
                 alt="logo"
@@ -89,10 +97,14 @@ export default function Navbar() {
             ></HStack>
           </HStack>
           <Box display={{ base: "none", md: "block" }} w="50%" m="auto">
-            <Flex direction={"row"} justifyContent="space-between">
+            <Flex
+              direction={"row"}
+              justifyContent="space-between"
+              color={navbar ? "gray.700" : "white"}
+            >
               <AnchorLink href="#hero">
                 <Text
-                  color={"white"}
+                  // color={"white"}
                   fontWeight="600"
                   fontSize="md"
                   fontFamily="Poppins"
@@ -102,7 +114,7 @@ export default function Navbar() {
               </AnchorLink>
               <AnchorLink href="#about">
                 <Text
-                  color={"white"}
+                  // color={"white"}
                   fontWeight="600"
                   fontSize="md"
                   fontFamily="Poppins"
@@ -110,9 +122,9 @@ export default function Navbar() {
                   About
                 </Text>
               </AnchorLink>
-              <AnchorLink href="#Skills">
+              <AnchorLink href="#skills">
                 <Text
-                  color={"white"}
+                  // color={"white"}
                   fontWeight="600"
                   fontSize="md"
                   fontFamily="Poppins"
@@ -122,7 +134,7 @@ export default function Navbar() {
               </AnchorLink>
               <AnchorLink href="#project">
                 <Text
-                  color={"white"}
+                  // color={"white"}
                   fontWeight="600"
                   fontSize="md"
                   fontFamily="Poppins"
@@ -130,9 +142,9 @@ export default function Navbar() {
                   Project
                 </Text>
               </AnchorLink>
-              <AnchorLink href="#">
+              <AnchorLink href="#contact">
                 <Text
-                  color={"white"}
+                  // color={"white"}
                   fontWeight="600"
                   fontSize="md"
                   fontFamily="Poppins"
@@ -147,7 +159,7 @@ export default function Navbar() {
               {colorMode === "light" ? (
                 <MoonIcon
                   color={colorMode === "light" ? "white" : "white"}
-                  bg="#6929c4"
+                  bg={navbar ? null : "#6929c4"}
                   _hover={{ bg: "teal.600" }}
                 />
               ) : (

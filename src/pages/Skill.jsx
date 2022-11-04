@@ -72,7 +72,7 @@ let skills = [
 
 const Skill = () => {
   return (
-    <Box bg="rgb(250,240,245)">
+    <Box bg="rgb(250,240,245)" id="skills">
       <Box w="70%" m="auto" py="4rem">
         <Flex justify="center">
           <RiLightbulbFill fontSize="50" color="#6929c4" />

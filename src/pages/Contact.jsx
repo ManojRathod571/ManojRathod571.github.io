@@ -26,7 +26,7 @@ import { IoLogoTwitter } from "react-icons/io";
 
 const Contact = () => {
   return (
-    <Box bg="rgb(245, 245, 245)">
+    <Box bg="rgb(245, 245, 245)" id="contact">
       <Box w="70%" m="auto" py="4rem">
         <Flex justify="center">
           <IoMdContact fontSize="2.5rem" color="rgba(38,50,157,1)" />

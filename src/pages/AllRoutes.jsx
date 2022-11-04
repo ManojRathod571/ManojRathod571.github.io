@@ -5,7 +5,7 @@ import About from "./About";
 import Education from "./Education";
 import Hero from "./Hero";
 import Projects from "./Projects";
-import Skills from "./Skills";
+import Skill from "./Skill";
 
 const AllRoutes = () => {
   return (
@@ -14,7 +14,7 @@ const AllRoutes = () => {
         <Route path="./" element={<Hero />}></Route>
         <Route path="./" element={<About />}></Route>
         <Route path="/education" element={<Education />}></Route>
-        <Route path="/skills" element={<Skills />}></Route>
+        <Route path="/skills" element={<Skill />}></Route>
         <Route path="/projects" element={<Projects />}></Route>
       </Routes>
     </Box>

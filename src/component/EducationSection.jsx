@@ -28,7 +28,7 @@ const EducationSection = () => {
         </Text>
         <motion.div
           initial={{
-            // x: 150,
+            x: 100,
             opacity: 0,
           }}
           transition={{
@@ -59,7 +59,7 @@ const EducationSection = () => {
         </Text>
         <motion.div
           initial={{
-            // x: 150,
+            x: 100,
             opacity: 0,
           }}
           transition={{
@@ -89,7 +89,7 @@ const EducationSection = () => {
         </Text>
         <motion.div
           initial={{
-            // x: 150,
+            x: 100,
             opacity: 0,
           }}
           transition={{
@@ -119,7 +119,7 @@ const EducationSection = () => {
         </Text>
         <motion.div
           initial={{
-            // x: 150,
+            x: 100,
             opacity: 0,
           }}
           transition={{

@@ -5,7 +5,6 @@ import Hero from "./pages/Hero";
 import About from "./pages/About";
 import AllRoutes from "./pages/AllRoutes";
 import Education from "./pages/Education";
-import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Calender from "./component/GitHubStat";
 import Stats from "./component/GitHubStrik";
@@ -22,7 +21,6 @@ function App() {
       <Hero />
       <About />
       <Education />
-      {/* <Skills /> */}
       <Skill />
       <Projects />
       <GitHub />
