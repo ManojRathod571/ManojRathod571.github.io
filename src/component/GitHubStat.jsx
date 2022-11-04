@@ -21,9 +21,9 @@ const Calender = () => {
     });
   };
   return (
-    <Box py="5rem" w="85%" m="auto" bg="">
+    <Box py="4rem" w="85%" m="auto" bg="">
       <Flex justify="center">
-        <GoMarkGithub fontSize="2.5rem" color="black" />
+        <GoMarkGithub fontSize="2.3rem" color="#6929c4" />
       </Flex>
       <Text
         fontSize="4xl"

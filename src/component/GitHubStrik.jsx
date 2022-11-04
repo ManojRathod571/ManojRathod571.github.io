@@ -8,6 +8,7 @@ const Stats = () => {
       pb="5rem"
       w="85%"
       m="auto"
+      justifyContent={"center"}
       alignItems={"center"}
       gap={{ base: "3", md: "5" }}
       gridTemplateColumns={{ base: "1fr", md: "repeat(3,1fr)" }}

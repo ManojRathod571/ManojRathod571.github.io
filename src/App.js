@@ -12,6 +12,7 @@ import Stats from "./component/GitHubStrik";
 import GitHub from "./pages/GitHub";
 import Contact from "./pages/Contact";
 import Footer from "./Footer/Footer";
+import Skill from "./pages/Skill";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
       <Hero />
       <About />
       <Education />
-      <Skills />
+      {/* <Skills /> */}
+      <Skill />
       <Projects />
       <GitHub />
       <Contact />

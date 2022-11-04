@@ -33,7 +33,7 @@ let array = [
 
 const Skills = () => {
   return (
-    <Grid bg="#B0E0E6" py="1rem" align="center" id="Skills">
+    <Grid bg="rgb(240, 240, 240)" py="1rem" align="center" id="Skills">
       <Box
         py="3rem"
         bg="radial-gradient(circle farthest-corner at 50% 50%,#7738d6 49%,rgba(28,0,71,.48))"
