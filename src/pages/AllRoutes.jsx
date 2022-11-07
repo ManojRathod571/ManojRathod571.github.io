@@ -12,7 +12,7 @@ const AllRoutes = () => {
     <Box>
       <Routes>
         <Route path="./" element={<Hero />}></Route>
-        <Route path="./" element={<About />}></Route>
+        <Route path="/about" element={<About />}></Route>
         <Route path="/education" element={<Education />}></Route>
         <Route path="/skills" element={<Skill />}></Route>
         <Route path="/projects" element={<Projects />}></Route>

@@ -2,43 +2,26 @@ import { useState } from "react";
 import {
   Box,
   Flex,
-  Avatar,
   HStack,
-  // Link,
   IconButton,
   Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
-  useColorModeValue,
   Stack,
   useColorMode,
   Text,
   Image,
+  VStack,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { Navigate, Link } from "react-router-dom";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
-const Links = ["Dashboard", "Projects", "Team"];
-
-// const NavLink = ({ children }: { children: ReactNode }) => (
-//   <Link
-//     px={2}
-//     py={1}
-//     rounded={"md"}
-//     _hover={{
-//       textDecoration: "none",
-//       bg: useColorModeValue("gray.200", "gray.700"),
-//     }}
-//     href={"#"}
-//   >
-//     {children}
-//   </Link>
-// );
+const Links = [
+  { path: "hero", title: "Home" },
+  { path: "about", title: "About" },
+  { path: "skills", title: "Skills" },
+  { path: "project", title: "Project" },
+  { path: "contact", title: "Contact" },
+];
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -102,56 +85,20 @@ export default function Navbar() {
               justifyContent="space-between"
               color={navbar ? "gray.700" : "white"}
             >
-              <AnchorLink href="#hero">
-                <Text
-                  // color={"white"}
-                  fontWeight="600"
-                  fontSize="md"
-                  fontFamily="Poppins"
-                >
-                  Home
-                </Text>
-              </AnchorLink>
-              <AnchorLink href="#about">
-                <Text
-                  // color={"white"}
-                  fontWeight="600"
-                  fontSize="md"
-                  fontFamily="Poppins"
-                >
-                  About
-                </Text>
-              </AnchorLink>
-              <AnchorLink href="#skills">
-                <Text
-                  // color={"white"}
-                  fontWeight="600"
-                  fontSize="md"
-                  fontFamily="Poppins"
-                >
-                  Skills
-                </Text>
-              </AnchorLink>
-              <AnchorLink href="#project">
-                <Text
-                  // color={"white"}
-                  fontWeight="600"
-                  fontSize="md"
-                  fontFamily="Poppins"
-                >
-                  Project
-                </Text>
-              </AnchorLink>
-              <AnchorLink href="#contact">
-                <Text
-                  // color={"white"}
-                  fontWeight="600"
-                  fontSize="md"
-                  fontFamily="Poppins"
-                >
-                  Contact
-                </Text>
-              </AnchorLink>
+              {Links.map(({ path, title }) => {
+                return (
+                  <AnchorLink href={`#${path}`}>
+                    <Text
+                      // color={"white"}
+                      fontWeight="600"
+                      fontSize="md"
+                      fontFamily="Poppins"
+                    >
+                      {title}
+                    </Text>
+                  </AnchorLink>
+                );
+              })}
             </Flex>
           </Box>
           <Flex alignItems={"center"}>
@@ -169,15 +116,34 @@ export default function Navbar() {
           </Flex>
         </Flex>
 
-        {/* {isOpen ? (
-          <Box pb={4} display={{ md: "none" }}>
-            <Stack as={"nav"} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+        {isOpen ? (
+          <VStack
+            justifyContent={"center"}
+            flexDirection="row"
+            textAlign="center"
+            alignItems="center"
+            h="100vh"
+            display={{ md: "none" }}
+            fontWeight="500"
+            fontSize="16px"
+          >
+            <VStack spacing={14} mt="20">
+              {Links.map((elem) => (
+                <AnchorLink href={`#${elem.path}`} key={elem.title}>
+                  <Text color="white" fontFamily="Poppins" fontSize="18px">
+                    {elem.title}
+                  </Text>
+                </AnchorLink>
               ))}
-            </Stack>
-          </Box>
-        ) : null} */}
+              {/* <AnchorLink
+                href="https://github.com/actuallyakshay/actuallyakshay.github.io/raw/master/Akshay-Rajput-Resume.pdf"
+                download={"Akshay-Rajput-Resume"}
+              >
+                RESUME
+              </AnchorLink> */}
+            </VStack>
+          </VStack>
+        ) : null}
       </Box>
     </>
   );
