@@ -1,38 +1,23 @@
-.App {
-  text-align: center;
-}
+.div1 {
+  --g: 4px; /* the gap */
+  --b: 3px; /* border thickness*/
+  --c: #fff; /* the color */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  padding: calc(var(--g) + var(--b));
+  --_c: #ffff 0 25%, var(--c) 0 98%;
+  --_g1: repeating-linear-gradient(90deg, var(--_c)) repeat-x;
+  --_g2: repeating-linear-gradient(180deg, var(--_c)) repeat-y;
+  background: var(--_g1) var(--_p, 10%) 0, var(--_g2) 0 var(--_p, 125%),
+    var(--_g1) var(--_p, 125%) 100%, var(--_g2) 100% var(--_p, 50%);
+  background-size: 200% var(--b), var(--b) 200%;
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: 0.3s;
+  z-index: 500;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.div1:hover {
+  --_p: 95%;
+  filter: grayscale(0%);
+  --c: #6929c4;
+  z-index: 500;
 }

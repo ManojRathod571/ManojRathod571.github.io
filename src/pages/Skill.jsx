@@ -1,6 +1,6 @@
 import { Box, Grid, Image, Flex, Text } from "@chakra-ui/react";
 import { RiLightbulbFill } from "react-icons/ri";
-import React from "react";
+import "../App.css";
 
 let skills = [
   {
@@ -72,13 +72,8 @@ let skills = [
 
 const Skill = () => {
   return (
-    <Box
-      id="skills"
-      bg="#f2f3f4"
-      // backgroundImage="linear-gradient(to top, #00c6fb 0%, #005bea 100%)"
-      // background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
-    >
-      <Box w={{ base: "100%", lg: "80%" }} m="auto" py="4rem">
+    <Box id="skills" bg="#fff0f5  ">
+      <Box w={{ base: "100%", lg: "80%" }} m="auto" py="2rem">
         <Flex justify="center">
           <RiLightbulbFill fontSize="50" color="#6929c4" />
         </Flex>
@@ -109,19 +104,22 @@ const Skill = () => {
                 h={{ base: "8rem", lg: "8rem" }}
                 w={{ base: "9rem", lg: "9rem" }}
                 flexDirection={"column"}
-                bg="white"
+                // bg="white"
                 boxShadow="rgb(0 0 0 / 15%) 0px 1px 50px"
                 key={id}
-                _hover=""
+                cursor="pointer"
+                className="div1"
               >
                 <Flex
                   justify="center"
                   align="center"
-                  bg="rgba(218,244, 235, 1)"
+                  // bg="rgb(210,228, 255)"
+                  bg="blue.200"
                   w="60px"
                   h="60px"
                   borderRadius="5px"
                   mb="1rem"
+                  zIndex="50"
                 >
                   <Image src={img} alt="" w="30px" h="30px" />
                 </Flex>

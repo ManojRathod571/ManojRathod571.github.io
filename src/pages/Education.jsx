@@ -13,10 +13,7 @@ const Education = () => {
         left={{ base: "1%", md: "", lg: "30%" }}
         zIndex="-50"
       >
-        <GiCapitol
-          color="rgb(245, 245, 245)"
-          fontSize={{ base: "15rem", md: "18rem", lg: "35rem" }}
-        />
+        <GiCapitol color="rgb(245, 245, 245)" fontSize="35rem" />
       </Box>
       <Grid
         gridTemplateColumns={{ base: "1fr", md: "1fr", lg: "repeat(2, 1fr)" }}
