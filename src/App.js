@@ -15,7 +15,7 @@ import Skill from "./pages/Skill";
 
 function App() {
   return (
-    <Box>
+    <Box overflowX={"hidden"}>
       <Navbar />
       {/* <AllRoutes /> */}
       <Hero />

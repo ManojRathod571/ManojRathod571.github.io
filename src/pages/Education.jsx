@@ -8,14 +8,24 @@ import { motion } from "framer-motion";
 const Education = () => {
   return (
     <Box w="85%" m="auto" py="4rem" id="Education">
-      <Box position="Absolute" left="30%" zIndex="-50">
-        <GiCapitol color="rgb(245, 245, 245)" fontSize={"35rem"} />
+      <Box
+        position="Absolute"
+        left={{ base: "1%", md: "", lg: "30%" }}
+        zIndex="-50"
+      >
+        <GiCapitol
+          color="rgb(245, 245, 245)"
+          fontSize={{ base: "15rem", md: "18rem", lg: "35rem" }}
+        />
       </Box>
-      <Grid gridTemplateColumns="repeat(2, 1fr)">
-        <Box pl="4rem">
+      <Grid
+        gridTemplateColumns={{ base: "1fr", md: "1fr", lg: "repeat(2, 1fr)" }}
+        rowGap={{ base: "3rem", lg: "none" }}
+      >
+        <Box pl={{ lg: "4rem" }}>
           <ExperienceSection />
         </Box>
-        <Box pl="4rem">
+        <Box pl={{ lg: "4rem" }}>
           <EducationSection />
         </Box>
       </Grid>

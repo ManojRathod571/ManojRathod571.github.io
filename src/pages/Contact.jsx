@@ -27,7 +27,7 @@ import { IoLogoTwitter } from "react-icons/io";
 const Contact = () => {
   return (
     <Box bg="rgb(245, 245, 245)" id="contact">
-      <Box w="70%" m="auto" py="4rem">
+      <Box w={{ lg: "70%" }} m="auto" py="4rem">
         <Flex justify="center">
           <IoMdContact fontSize="2.5rem" color="rgba(38,50,157,1)" />
         </Flex>
@@ -41,13 +41,19 @@ const Contact = () => {
           Contact Me
         </Text>
         <Grid
-          gridTemplateColumns="1fr 1.6fr"
-          h="70vh"
+          gridTemplateColumns={{ base: "1fr", md: "1fr", lg: "1fr 1.6fr" }}
+          h={{ base: "auto", lg: "70vh" }}
           boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
-          borderRadius="10px"
+          borderRadius={{ lg: "10px" }}
           bg="white"
+          rowGap={{ base: "2rem", lg: "" }}
         >
-          <Box bg="rgba(38,50,157,1)" py="3rem" px="1.5rem" borderRadius="10px">
+          <Box
+            bg="rgba(38,50,157,1)"
+            py="3rem"
+            px="1.5rem"
+            borderRadius={{ lg: "10px" }}
+          >
             <Text
               fontSize="25px"
               fontFamily="Poppins"
@@ -118,7 +124,11 @@ const Contact = () => {
               <IoLogoTwitter fontSize="1.6rem" color="white" />
             </Flex>
           </Box>
-          <Box w="60%" m="auto">
+          <Box
+            w={{ base: "85%", md: "", lg: "60%" }}
+            m="auto"
+            pb={{ base: "1.5rem", lg: "none" }}
+          >
             <FormControl>
               <Box mb="1rem">
                 <FormLabel fontFamily="Poppins" color="gray.700">

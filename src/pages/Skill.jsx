@@ -72,8 +72,13 @@ let skills = [
 
 const Skill = () => {
   return (
-    <Box bg="rgb(250,240,245)" id="skills">
-      <Box w="70%" m="auto" py="4rem">
+    <Box
+      id="skills"
+      bg="#f2f3f4"
+      // backgroundImage="linear-gradient(to top, #00c6fb 0%, #005bea 100%)"
+      // background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+    >
+      <Box w={{ base: "100%", lg: "80%" }} m="auto" py="4rem">
         <Flex justify="center">
           <RiLightbulbFill fontSize="50" color="#6929c4" />
         </Flex>
@@ -83,11 +88,17 @@ const Skill = () => {
           textAlign={"center"}
           color="#001141"
           pt="1rem"
-          mb="2rem"
         >
           Skills
         </Text>
-        <Flex flexWrap="wrap" justifyContent="center" gap={10}>
+        <Flex
+          flexWrap={{ lg: "wrap" }}
+          justifyContent={{ lg: "center" }}
+          gap={{ base: "5", lg: 10 }}
+          overflowX={{ base: "auto", lg: "none" }}
+          py={{ base: "3rem", lg: "3rem" }}
+          px={{ base: "1rem", lg: "none" }}
+        >
           {skills.map(({ id, img, name }) => {
             return (
               <Flex
@@ -95,12 +106,13 @@ const Skill = () => {
                 p="1rem"
                 justify="center"
                 align="center"
-                h="10rem"
-                w="11rem"
+                h={{ base: "8rem", lg: "8rem" }}
+                w={{ base: "9rem", lg: "9rem" }}
                 flexDirection={"column"}
                 bg="white"
                 boxShadow="rgb(0 0 0 / 15%) 0px 1px 50px"
                 key={id}
+                _hover=""
               >
                 <Flex
                   justify="center"
@@ -116,8 +128,9 @@ const Skill = () => {
                 <Text
                   fontFamily="Poppins"
                   textAlign={"center"}
-                  fontSize="18px"
+                  fontSize="16px"
                   fontWeight="600"
+                  minW={{ base: "6rem", lg: "none" }}
                 >
                   {name}
                 </Text>

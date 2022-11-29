@@ -7,7 +7,7 @@ import { SiRedux } from "react-icons/si";
 import { SiChakraui } from "react-icons/si";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoHtml5 } from "react-icons/io";
-import { IoLogoJavascript } from "react-icons/io";
+// import { IoLogoJavascript } from "react-icons/io";
 
 const TechStack = () => {
   return (
@@ -25,14 +25,18 @@ const TechStack = () => {
           Tech Stack
         </Text>
       </Flex>
-      <Flex align={"center"} justifyContent="space-between" mb="1.5rem">
+      <Flex
+        align={"center"}
+        justifyContent={{ base: "space-evenly", lg: "space-between" }}
+        mb="1.5rem"
+      >
         <Flex>
-          <Box pr="1rem">
-            <FaReact color="#001141" fontSize="22px" />
+          <Box pr={{ base: ".3rem", lg: "1rem" }}>
+            <FaReact color="#001141" fontSize={{ base: "18px", lg: "22px" }} />
           </Box>
           <Text
-            fontSize="16px"
-            fontWeight="500"
+            fontSize={{ base: "13px", md: "", lg: "16px" }}
+            fontWeight={{ base: "400", lg: "500" }}
             fontFamily="Poppins"
             color="rgba(56,49,68,.8)"
           >
@@ -41,12 +45,12 @@ const TechStack = () => {
         </Flex>
 
         <Flex>
-          <Box pr="1rem">
-            <SiRedux color="#001141" fontSize="22px" />
+          <Box pr={{ base: ".3rem", lg: "1rem" }}>
+            <SiRedux color="#001141" fontSize={{ base: "18px", lg: "22px" }} />
           </Box>
           <Text
-            fontSize="16px"
-            fontWeight="500"
+            fontSize={{ base: "13px", md: "", lg: "16px" }}
+            fontWeight={{ base: "400", lg: "500" }}
             fontFamily="Poppins"
             color="rgba(56,49,68,.8)"
           >
@@ -54,12 +58,15 @@ const TechStack = () => {
           </Text>
         </Flex>
         <Flex>
-          <Box pr="1rem">
-            <FaCss3Alt color="#001141" fontSize="22px" />
+          <Box pr={{ base: ".3rem", lg: "1rem" }}>
+            <FaCss3Alt
+              color="#001141"
+              fontSize={{ base: "18px", lg: "22px" }}
+            />
           </Box>
           <Text
-            fontSize="16px"
-            fontWeight="500"
+            fontSize={{ base: "13px", md: "", lg: "16px" }}
+            fontWeight={{ base: "400", lg: "500" }}
             fontFamily="Poppins"
             color="rgba(56,49,68,.8)"
           >
@@ -67,12 +74,15 @@ const TechStack = () => {
           </Text>
         </Flex>
         <Flex>
-          <Box pr="1rem">
-            <IoLogoHtml5 color="#001141" fontSize="22px" />
+          <Box pr={{ base: ".3rem", lg: "1rem" }}>
+            <IoLogoHtml5
+              color="#001141"
+              fontSize={{ base: "18px", lg: "22px" }}
+            />
           </Box>
           <Text
-            fontSize="16px"
-            fontWeight="500"
+            fontSize={{ base: "13px", md: "", lg: "16px" }}
+            fontWeight={{ base: "400", lg: "500" }}
             fontFamily="Poppins"
             color="rgba(56,49,68,.8)"
           >
@@ -80,12 +90,12 @@ const TechStack = () => {
           </Text>
         </Flex>
         {/* <Flex>
-          <Box pr="1rem">
-            <IoLogoJavascript color="#001141" fontSize="22px" />
+          <Box pr={{ base: ".3rem", lg: "1rem" }}>
+            <IoLogoJavascript color="#001141" fontSize={{ base: "18px", lg: "22px" }} />
           </Box>
           <Text
-            fontSize="16px"
-            fontWeight="500"
+           fontSize={{ base: "13px", md: "", lg: "16px" }}
+            fontWeight={{ base: "400", lg: "500" }}
             fontFamily="Poppins"
             color="rgba(56,49,68,.8)"
           >
@@ -93,12 +103,15 @@ const TechStack = () => {
           </Text>
         </Flex> */}
         <Flex>
-          <Box pr="1rem">
-            <SiChakraui color="#001141" fontSize="22px" />
+          <Box pr={{ base: ".3rem", lg: "1rem" }}>
+            <SiChakraui
+              color="#001141"
+              fontSize={{ base: "18px", lg: "22px" }}
+            />
           </Box>
           <Text
-            fontSize="16px"
-            fontWeight="500"
+            fontSize={{ base: "13px", md: "", lg: "16px" }}
+            fontWeight={{ base: "400", lg: "500" }}
             fontFamily="Poppins"
             color="rgba(56,49,68,.8)"
           >

@@ -8,7 +8,12 @@ import { Link } from "react-router-dom";
 
 const SocialMediaSection = () => {
   return (
-    <Flex pt={"2rem"} w="30%" margin="auto" justify="space-around">
+    <Flex
+      pt={"2rem"}
+      w={{ base: "80%", lg: "30%" }}
+      margin="auto"
+      justify="space-around"
+    >
       <Flex
         w="35px"
         h="35px"

@@ -7,7 +7,7 @@ import TechStack from "./TechStack";
 
 const ProjectRightSection = ({ name, desc, duaration }) => {
   return (
-    <Box mb="5rem" zIndex={20}>
+    <Box mb="5rem" zIndex={20} w="100%" m={{ base: "auto", lg: "none" }}>
       <Text
         fontSize="30px"
         fontFamily="Poppins"
@@ -41,8 +41,8 @@ const ProjectRightSection = ({ name, desc, duaration }) => {
       </Flex>
       {/* Tech Stack */}
       <TechStack />
-      <Flex justify={"start"}>
-        <Box pr="2rem">
+      <Flex justify={{ base: "space-between", lg: "start" }}>
+        <Box pr={{ lg: "2rem" }}>
           <Link to="/">
             <LinkButton link="See This Live" />
           </Link>

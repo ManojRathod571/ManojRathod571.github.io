@@ -27,7 +27,12 @@ const FoodApp = [
 const Projects = () => {
   return (
     <Box bg="rgb(245, 245, 245)" pb="5rem" id="project">
-      <Box w="85%" m="auto" py="4rem">
+      <Box
+        w={{ base: "90%", lg: "85%" }}
+        m="auto"
+        py="4rem"
+        position="relative"
+      >
         <Flex justify="center">
           <FaProjectDiagram fontSize="2rem" color="#6929c4" />
         </Flex>
@@ -41,12 +46,13 @@ const Projects = () => {
           Projects
         </Text>
         {/* bg Image */}
-        {/* <Box
+        <Box
           position="absolute"
-          top="185rem"
-          bottom="25rem"
-          left="10rem"
+          top="5rem"
+          bottom="0rem"
+          left="3rem"
           right="0"
+          display={{ base: "none", lg: "block" }}
         >
           <Image
             src="https://assets-global.website-files.com/5db165cbf782f992df567ae5/60f835b74a8c5743d88a28b8_lines-home.svg"
@@ -59,26 +65,46 @@ const Projects = () => {
             left="0"
             right="0"
           />
-        </Box> */}
-        <Grid gridTemplateColumns=".9fr 1fr" gap="5rem" zIndex={10}>
-          <ProjectLeftSection FoodApp={FoodApp} />
-          <ProjectRightSection
-            name="Food App"
-            duaration="A Solo Project executed in 01 day"
-            desc="This project is about an Online E-commerce food web application showing the functionalities of an e-commerce website like sorting, searching , filtering, add to cart, login/signup and many more."
-          />
-          <ProjectRightSection
-            name="Food App"
-            duaration="A Solo Project executed in 01 day"
-            desc="This project is about an Online E-commerce food web application showing the functionalities of an e-commerce website like sorting, searching , filtering, add to cart, login/signup and many more."
-          />
-          <ProjectLeftSection FoodApp={FoodApp} />
-          <ProjectLeftSection FoodApp={FoodApp} />
-          <ProjectRightSection
-            name="Food App"
-            duaration="A Solo Project executed in 01 day"
-            desc="This project is about an Online E-commerce food web application showing the functionalities of an e-commerce website like sorting, searching , filtering, add to cart, login/signup and many more."
-          />
+        </Box>
+        <Grid
+          gridTemplateColumns={{ base: "1fr", md: "1fr", lg: ".9fr 1fr" }}
+          gap={{ base: "2rem", md: "", lg: "5rem" }}
+          zIndex={100}
+        >
+          <Box
+            zIndex={100}
+            // gridRowStart={{ base: "2", md: "none", lg: "none" }}
+            // gridRowEnd={{ base: "3", md: "none", lg: "none" }}
+          >
+            <ProjectLeftSection FoodApp={FoodApp} />
+          </Box>
+          <Box zIndex={100}>
+            <ProjectRightSection
+              name="Food App"
+              duaration="A Solo Project executed in 01 day"
+              desc="This project is about an Online E-commerce food web application showing the functionalities of an e-commerce website like sorting, searching , filtering, add to cart, login/signup and many more."
+            />
+          </Box>
+          <Box zIndex={100}>
+            <ProjectRightSection
+              name="Food App"
+              duaration="A Solo Project executed in 01 day"
+              desc="This project is about an Online E-commerce food web application showing the functionalities of an e-commerce website like sorting, searching , filtering, add to cart, login/signup and many more."
+            />
+          </Box>
+          <Box zIndex={100}>
+            <ProjectLeftSection FoodApp={FoodApp} />
+          </Box>
+          <Box zIndex={100}>
+            <ProjectLeftSection FoodApp={FoodApp} />
+          </Box>
+          <Box zIndex={100}>
+            <ProjectRightSection
+              name="Food App"
+              duaration="A Solo Project executed in 01 day"
+              desc="This project is about an Online E-commerce food web application showing the functionalities of an e-commerce website like sorting, searching , filtering, add to cart, login/signup and many more."
+            />
+          </Box>
         </Grid>
       </Box>
     </Box>

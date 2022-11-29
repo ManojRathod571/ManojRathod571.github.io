@@ -21,6 +21,7 @@ const Links = [
   { path: "skills", title: "Skills" },
   { path: "project", title: "Project" },
   { path: "contact", title: "Contact" },
+  { path: "resume", title: "Resume" },
 ];
 
 export default function Navbar() {

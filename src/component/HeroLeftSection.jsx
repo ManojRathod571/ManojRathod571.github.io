@@ -4,7 +4,7 @@ import img1 from "../Images/desktop.gif";
 
 const HeroLeftSection = () => {
   return (
-    <Flex align={"center"}>
+    <Flex align={"center"} display={{ base: "none", lg: "block" }}>
       <Flex borderRadius="50%" w="100%" h="auto" justify={"right"}>
         {/* <Image src={img1} alt="desktop" borderRadius="50%" w="90%" h="auto" /> */}
         <svg

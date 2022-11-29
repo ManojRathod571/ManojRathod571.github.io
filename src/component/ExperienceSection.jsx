@@ -10,9 +10,9 @@ const ExperienceSection = () => {
           <BsFillPersonLinesFill fontSize="35px" color="#6929c4" />
         </Flex>
         <Text
-          fontSize="3xl"
-          fontFamily="Poppins"
-          fontWeight="500"
+          fontSize={{ base: "3xl", lg: "3xl" }}
+          fontFamily="Quicksand"
+          fontWeight="700"
           textAlign={"center"}
           color="#001141"
         >
@@ -21,8 +21,13 @@ const ExperienceSection = () => {
       </Flex>
 
       <Box py="1.5rem">
-        <Text fontSize="22px" fontWeight="500" fontFamily="Poppins" color="">
-          Frontend Engineering
+        <Text
+          fontSize={{ base: "22px" }}
+          fontWeight="500"
+          fontFamily="Quicksand"
+          color="#001141"
+        >
+          Frontend Engineer
         </Text>
         <motion.div
           initial={{
@@ -41,7 +46,7 @@ const ExperienceSection = () => {
             pt="10px"
             fontSize="16px"
             fontWeight="400"
-            fontFamily="Poppins"
+            fontFamily="Quicksand"
             color=""
             // fontStyle="italic"
           >
@@ -51,7 +56,7 @@ const ExperienceSection = () => {
             pt="10px"
             fontSize="16px"
             fontWeight="600"
-            fontFamily="Poppins"
+            fontFamily="Quicksand"
             color=""
             // fontStyle="italic"
           >
@@ -61,7 +66,7 @@ const ExperienceSection = () => {
             pt="10px"
             fontSize="16px"
             fontWeight="400"
-            fontFamily="Poppins"
+            fontFamily="Quicksand"
             color=""
             // fontStyle="italic"
           >
@@ -71,7 +76,7 @@ const ExperienceSection = () => {
             pt="10px"
             fontSize="16px"
             fontWeight="600"
-            fontFamily="Poppins"
+            fontFamily="Quicksand"
             color=""
             // fontStyle="italic"
           >
@@ -90,7 +95,7 @@ const ExperienceSection = () => {
             <Text
               fontSize="16px"
               fontWeight="400"
-              fontFamily="Poppins"
+              fontFamily="Quicksand"
               color=""
               // fontStyle="italic"
             >
@@ -110,7 +115,7 @@ const ExperienceSection = () => {
             <Text
               fontSize="16px"
               fontWeight="400"
-              fontFamily="Poppins"
+              fontFamily="Quicksand"
               color=""
             >
               Develop web pages in React JS and Next JS
@@ -129,7 +134,7 @@ const ExperienceSection = () => {
             <Text
               fontSize="16px"
               fontWeight="400"
-              fontFamily="Poppins"
+              fontFamily="Quicksand"
               color=""
             >
               Develop web pages in React JS and Next JS
@@ -138,7 +143,12 @@ const ExperienceSection = () => {
         </motion.div>
       </Box>
       <Box py="0rem">
-        <Text fontSize="22px" fontWeight="500" fontFamily="Poppins" color="">
+        <Text
+          fontSize={{ base: "22px" }}
+          fontWeight="500"
+          fontFamily="Quicksand"
+          color="#001141"
+        >
           Account Executive
         </Text>
         <motion.div
@@ -158,7 +168,7 @@ const ExperienceSection = () => {
             pt="10px"
             fontSize="16px"
             fontWeight="400"
-            fontFamily="Poppins"
+            fontFamily="Quicksand"
             color=""
             // fontStyle="italic"
           >
@@ -168,7 +178,7 @@ const ExperienceSection = () => {
             pt="10px"
             fontSize="16px"
             fontWeight="600"
-            fontFamily="Poppins"
+            fontFamily="Quicksand"
             color=""
             // fontStyle="italic"
           >
@@ -178,7 +188,7 @@ const ExperienceSection = () => {
             pt="10px"
             fontSize="16px"
             fontWeight="400"
-            fontFamily="Poppins"
+            fontFamily="Quicksand"
             color=""
             // fontStyle="italic"
           >
@@ -188,7 +198,7 @@ const ExperienceSection = () => {
             pt="10px"
             fontSize="16px"
             fontWeight="600"
-            fontFamily="Poppins"
+            fontFamily="Quicksand"
             color=""
             // fontStyle="italic"
           >
@@ -207,7 +217,7 @@ const ExperienceSection = () => {
             <Text
               fontSize="16px"
               fontWeight="400"
-              fontFamily="Poppins"
+              fontFamily="Quicksand"
               color=""
               // fontStyle="italic"
             >
@@ -227,7 +237,7 @@ const ExperienceSection = () => {
             <Text
               fontSize="16px"
               fontWeight="400"
-              fontFamily="Poppins"
+              fontFamily="Quicksand"
               color=""
             >
               Handle user account
