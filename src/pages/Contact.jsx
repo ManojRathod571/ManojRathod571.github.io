@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import {
   Box,
   Grid,
@@ -11,6 +11,7 @@ import {
   InputLeftElement,
   Textarea,
   Button,
+  useToast,
 } from "@chakra-ui/react";
 import { IoMdContact } from "react-icons/io";
 import { MdDriveFileRenameOutline } from "react-icons/md";
@@ -24,7 +25,16 @@ import { GoMarkGithub } from "react-icons/go";
 import { CgMail } from "react-icons/cg";
 import { IoLogoTwitter } from "react-icons/io";
 
+const inputValues = {
+  name: "",
+  email: "",
+  message: "",
+};
 const Contact = () => {
+  const [input, setInput] = useState(inputValues);
+
+  const handleInputChange = (e) => {};
+  const toast = useToast();
   return (
     <Box bg="rgb(245, 245, 245)" id="contact">
       <Box w={{ lg: "70%" }} m="auto" py="4rem">
@@ -118,10 +128,19 @@ const Contact = () => {
               </Text>
             </Flex>
             <Flex justify="space-evenly">
-              <BsLinkedin fontSize="1.6rem" color="white" />
-              <GoMarkGithub fontSize="1.6rem" color="white" />
-              <CgMail fontSize="1.6rem" color="white" />
-              <IoLogoTwitter fontSize="1.6rem" color="white" />
+              <a href="https://www.linkedin.com/in/manoj-rathod-01943911a/">
+                {" "}
+                <BsLinkedin fontSize="1.6rem" color="white" />
+              </a>
+              <a href="https://github.com/ManojRathod571">
+                <GoMarkGithub fontSize="1.6rem" color="white" />
+              </a>
+              <a href="">
+                <CgMail fontSize="1.6rem" color="white" />
+              </a>
+              <a href="https://twitter.com/ManojRa65572407/media">
+                <IoLogoTwitter fontSize="1.6rem" color="white" />
+              </a>
             </Flex>
           </Box>
           <Box
@@ -143,6 +162,8 @@ const Contact = () => {
                     type="text"
                     placeholder="Enter your name"
                     color="gray.700"
+                    required
+                    onChange={handleInputChange}
                   />
                 </InputGroup>
               </Box>
@@ -160,6 +181,8 @@ const Contact = () => {
                     type="text"
                     placeholder="Enter your Email"
                     color="gray.700"
+                    required
+                    onChange={handleInputChange}
                   />
                 </InputGroup>
               </Box>
@@ -169,7 +192,10 @@ const Contact = () => {
                   Message
                 </FormLabel>
 
-                <Textarea placeholder="Enter your message here" />
+                <Textarea
+                  placeholder="Enter your message here"
+                  resize={"none"}
+                />
               </Box>
               <Button
                 mt="4"
@@ -178,6 +204,17 @@ const Contact = () => {
                 type="submit"
                 w="100%"
                 mb="1rem"
+                onClick={() =>
+                  toast({
+                    title: "Form Submitted",
+                    description: "Thank you for contact us",
+                    status: "success",
+                    duration: 3000,
+                    isClosable: true,
+                    position: "top-center",
+                  })
+                }
+                _hover={{ bg: "#6929c4" }}
               >
                 Send Your Message
               </Button>

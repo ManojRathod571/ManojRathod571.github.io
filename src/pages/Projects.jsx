@@ -81,6 +81,8 @@ const Projects = () => {
           <Box zIndex={100}>
             <ProjectRightSection
               name="Food App"
+              deployurl="https://groc-basket.vercel.app/"
+              gitHibLink="https://github.com/amss-22/taboo-lock-5540"
               duaration="A Solo Project executed in 01 day"
               desc="This project is about an Online E-commerce food web application showing the functionalities of an e-commerce website like sorting, searching , filtering, add to cart, login/signup and many more."
             />
@@ -88,6 +90,8 @@ const Projects = () => {
           <Box zIndex={100}>
             <ProjectRightSection
               name="Food App"
+              deployurl="https://groc-basket.vercel.app/"
+              gitHibLink="https://github.com/amss-22/taboo-lock-5540"
               duaration="A Solo Project executed in 01 day"
               desc="This project is about an Online E-commerce food web application showing the functionalities of an e-commerce website like sorting, searching , filtering, add to cart, login/signup and many more."
             />
@@ -100,6 +104,8 @@ const Projects = () => {
           </Box>
           <Box zIndex={100}>
             <ProjectRightSection
+              deployurl="https://groc-basket.vercel.app/"
+              gitHibLink="https://github.com/amss-22/taboo-lock-5540"
               name="Food App"
               duaration="A Solo Project executed in 01 day"
               desc="This project is about an Online E-commerce food web application showing the functionalities of an e-commerce website like sorting, searching , filtering, add to cart, login/signup and many more."

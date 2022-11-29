@@ -5,7 +5,13 @@ import { Link } from "react-router-dom";
 import LinkButton from "./LinkButton";
 import TechStack from "./TechStack";
 
-const ProjectRightSection = ({ name, desc, duaration }) => {
+const ProjectRightSection = ({
+  name,
+  desc,
+  duaration,
+  deployurl,
+  gitHibLink,
+}) => {
   return (
     <Box mb="5rem" zIndex={20} w="100%" m={{ base: "auto", lg: "none" }}>
       <Text
@@ -43,13 +49,13 @@ const ProjectRightSection = ({ name, desc, duaration }) => {
       <TechStack />
       <Flex justify={{ base: "space-between", lg: "start" }}>
         <Box pr={{ lg: "2rem" }}>
-          <Link to="/">
+          <a href={`${deployurl}`}>
             <LinkButton link="See This Live" />
-          </Link>
+          </a>
         </Box>
-        <Link to="/">
+        <a href={`${gitHibLink}`}>
           <LinkButton link="Github" />
-        </Link>
+        </a>
       </Flex>
     </Box>
   );

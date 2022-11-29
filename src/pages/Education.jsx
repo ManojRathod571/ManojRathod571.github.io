@@ -12,6 +12,7 @@ const Education = () => {
         position="Absolute"
         left={{ base: "1%", md: "", lg: "30%" }}
         zIndex="-50"
+        display={{ base: "none", md: "", lg: "block" }}
       >
         <GiCapitol color="rgb(245, 245, 245)" fontSize="35rem" />
       </Box>
