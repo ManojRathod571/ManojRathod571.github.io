@@ -12,6 +12,7 @@ import {
   Image,
   VStack,
 } from "@chakra-ui/react";
+import { BsCloudArrowUpFill } from "react-icons/bs";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
@@ -21,7 +22,6 @@ const Links = [
   { path: "skills", title: "Skills" },
   { path: "project", title: "Project" },
   { path: "contact", title: "Contact" },
-  { path: "resume", title: "Resume" },
 ];
 
 export default function Navbar() {
@@ -32,7 +32,7 @@ export default function Navbar() {
 
   const changeNavbarBg = () => {
     console.log(window.scrollY);
-    if (window.scrollY >= 650) {
+    if (window.scrollY >= 600) {
       setNavbar(true);
     } else {
       setNavbar(false);
@@ -44,11 +44,13 @@ export default function Navbar() {
   return (
     <>
       <Box
-        bg={navbar ? "white" : "#6929c4"}
+        bg={navbar ? "#FFF" : "#6929c4"}
         px={4}
-        position="sticky"
-        zIndex={100}
-        top="0"
+        position="fixed"
+        zIndex={1000}
+        top={0}
+        right={0}
+        left={0}
         boxShadow={navbar ? "rgba(0, 0, 0, 0.1) 0px 4px 12px" : null}
         // boxShadow={navbar ? "rgba(0, 0, 0, 0.16) 0px 1px 2px" : null}
       >
@@ -65,7 +67,7 @@ export default function Navbar() {
             alignItems={"center"}
             display={{ base: "none", md: "block" }}
           >
-            <Flex color={"black"}>
+            <Flex color={"black"} cursor="pointer">
               <Image
                 src="https://i.postimg.cc/kXkJm1sG/final-logo-removebg-preview.png"
                 alt="logo"
@@ -103,7 +105,7 @@ export default function Navbar() {
             </Flex>
           </Box>
           <Flex alignItems={"center"}>
-            <Button onClick={toggleColorMode} bg="#6929c4">
+            {/* <Button onClick={toggleColorMode} bg="#6929c4">
               {colorMode === "light" ? (
                 <MoonIcon
                   color={colorMode === "light" ? "white" : "white"}
@@ -113,7 +115,7 @@ export default function Navbar() {
               ) : (
                 <SunIcon />
               )}
-            </Button>
+            </Button> */}
           </Flex>
         </Flex>
 
@@ -136,13 +138,15 @@ export default function Navbar() {
                   </Text>
                 </AnchorLink>
               ))}
-              {/* <AnchorLink
-                href="https://github.com/actuallyakshay/actuallyakshay.github.io/raw/master/Akshay-Rajput-Resume.pdf"
-                download={"Akshay-Rajput-Resume"}
-              >
-                RESUME
-              </AnchorLink> */}
             </VStack>
+            <a
+              href="https://github.com/ManojRathod571/Resume/raw/main/Manoj_Rathod_Resume.pdf"
+              download={"Manoj_Rathod_Resume.pdf"}
+            >
+              <Text color="red" fontFamily="Poppins" fontSize="18px">
+                Resume
+              </Text>
+            </a>
           </VStack>
         ) : null}
       </Box>

@@ -76,7 +76,7 @@ const HeroRightSection = () => {
         <Flex justify={"center"} pt="2rem">
           <a
             href="https://github.com/ManojRathod571/Resume/raw/main/Manoj_Rathod_Resume.pdf"
-            download={"Manoj-Rathod_Resume"}
+            download={"Manoj_Rathod_Resume.pdf"}
           >
             <Button
               bg="white"

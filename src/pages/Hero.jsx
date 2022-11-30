@@ -11,11 +11,12 @@ const Hero = () => {
   return (
     <>
       <Box
-        h={{ base: "auto", lg: "91vh" }}
+        h={{ base: "auto", lg: "94vh" }}
         bg="#6929c4"
         color={"white"}
         fontFamily="Poppins"
         id="hero"
+        pt={{ lg: "3rem" }}
         // pb={{ base: "2rem", lg: "none" }}
       >
         <Grid
