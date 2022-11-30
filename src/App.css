@@ -12,7 +12,7 @@
   background-size: 200% var(--b), var(--b) 200%;
   cursor: pointer;
   /* filter: grayscale(100%); */
-  transition: 0.3s;
+  transition: .5s;
   z-index: 500;
 }
 .div1:hover {

@@ -6,8 +6,12 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <Box bg="rgb(245, 245, 245)" id="about" py="3rem">
-      <Box w="85%" margin={"auto"}>
+    <Box
+      bg="rgb(245, 245, 245)"
+      id="about"
+      py={{ base: "2rem", md: "0rem", lg: "3rem" }}
+    >
+      <Box w={{ base: "85%", md: "95%", lg: "85%" }} margin={"auto"}>
         <Flex justify="center">
           <FcAbout fontSize="2rem" color="green" />
         </Flex>
@@ -37,7 +41,13 @@ const About = () => {
             py="2rem"
             rowGap={{ base: "3rem", lg: "block" }}
           >
-            <Flex w="80%" m="auto" h="auto" align="center" justify={"center"}>
+            <Flex
+              w="80%"
+              m={{ base: "auto", md: "left", lg: "auto" }}
+              h="auto"
+              align="center"
+              justify={{ base: "center", md: "left", lg: "center" }}
+            >
               <Box>
                 <Image
                   src={profile}

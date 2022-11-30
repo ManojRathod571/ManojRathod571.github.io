@@ -16,11 +16,11 @@ const Hero = () => {
         color={"white"}
         fontFamily="Poppins"
         id="hero"
-        pt={{ lg: "3rem" }}
+        pt={{ base: ".5rem", md: "3.5rem", lg: "3rem" }}
         // pb={{ base: "2rem", lg: "none" }}
       >
         <Grid
-          templateColumns={{ base: "1fr", md: "1fr .7fr" }}
+          templateColumns={{ base: "1fr", md: "1fr", lg: "1fr .7fr" }}
           w={{ base: "100%", md: "90%" }}
           margin={"auto"}
           pt="1rem"

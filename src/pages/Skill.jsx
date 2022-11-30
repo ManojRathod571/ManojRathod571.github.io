@@ -87,10 +87,10 @@ const Skill = () => {
           Skills
         </Text>
         <Flex
-          flexWrap={{ lg: "wrap" }}
-          justifyContent={{ lg: "center" }}
+          flexWrap={{ md: "wrap" }}
+          justifyContent={{ md: "center" }}
           gap={{ base: "5", lg: 10 }}
-          overflowX={{ base: "auto", lg: "none" }}
+          overflowX={{ base: "auto", md: "none" }}
           py={{ base: "3rem", lg: "3rem" }}
           px={{ base: "1rem", lg: "none" }}
         >

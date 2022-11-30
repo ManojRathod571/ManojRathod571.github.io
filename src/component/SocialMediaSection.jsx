@@ -10,7 +10,7 @@ const SocialMediaSection = () => {
   return (
     <Flex
       pt={"2rem"}
-      w={{ base: "80%", lg: "40%" }}
+      w={{ base: "80%", md: "60%", lg: "40%" }}
       margin="auto"
       justify="space-around"
     >

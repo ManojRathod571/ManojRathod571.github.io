@@ -22,6 +22,10 @@ const Links = [
   { path: "skills", title: "Skills" },
   { path: "project", title: "Project" },
   { path: "contact", title: "Contact" },
+  {
+    title: "Resume",
+    link: "https://github.com/ManojRathod571/Resume/raw/main/Manoj_Rathod_Resume.pdf",
+  },
 ];
 
 export default function Navbar() {
@@ -133,20 +137,27 @@ export default function Navbar() {
             <VStack spacing={14} mt="20">
               {Links.map((elem) => (
                 <AnchorLink href={`#${elem.path}`} key={elem.title}>
-                  <Text color="white" fontFamily="Poppins" fontSize="18px">
-                    {elem.title}
-                  </Text>
+                  <a href={`${elem.link}`}>
+                    <Text color="white" fontFamily="Poppins" fontSize="18px">
+                      {elem.title}
+                    </Text>
+                  </a>
                 </AnchorLink>
               ))}
-            </VStack>
-            <a
-              href="https://github.com/ManojRathod571/Resume/raw/main/Manoj_Rathod_Resume.pdf"
-              download={"Manoj_Rathod_Resume.pdf"}
-            >
-              <Text color="red" fontFamily="Poppins" fontSize="18px">
+              {/* <a
+                href="https://github.com/ManojRathod571/Resume/raw/main/Manoj_Rathod_Resume.pdf"
+                download={"Manoj_Rathod_Resume.pdf"}
+              > */}
+              {/* <Text
+                color="red"
+                fontFamily="Poppins"
+                fontSize="18px"
+                zIndex={1200}
+              >
                 Resume
-              </Text>
-            </a>
+              </Text> */}
+              {/* </a> */}
+            </VStack>
           </VStack>
         ) : null}
       </Box>

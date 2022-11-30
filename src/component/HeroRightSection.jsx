@@ -32,7 +32,7 @@ const HeroRightSection = () => {
         <Flex justify="center" pt="1rem">
           <h1>
             <Text
-              fontSize={{ base: "xs", md: "md", lg: "xl" }}
+              fontSize={{ base: "xs", md: "xl", lg: "xl" }}
               fontWeight={{ base: "400", md: "400", lg: "500" }}
               fontFamily="Poppins"
               color="#FFF5EE"
@@ -63,10 +63,7 @@ const HeroRightSection = () => {
           </h1>
         </Flex>
         <Flex pt="1rem">
-          <Text
-            textAlign={"center"}
-            fontSize={{ base: "", md: "", lg: "17px" }}
-          >
+          <Text textAlign={"center"} fontSize={{ base: "", md: "17px" }}>
             A Mern Stack Developer who loves solving problems and building
             projects. I am equipped with a variety of technologies and tools to
             help me build the best possible product.

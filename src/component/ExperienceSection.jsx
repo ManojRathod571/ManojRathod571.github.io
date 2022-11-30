@@ -10,7 +10,7 @@ const ExperienceSection = () => {
           <BsFillPersonLinesFill fontSize="35px" color="#6929c4" />
         </Flex>
         <Text
-          fontSize={{ base: "3xl", lg: "3xl" }}
+          fontSize={{ base: "3xl", md: "2xl", lg: "3xl" }}
           fontFamily="Quicksand"
           fontWeight="700"
           textAlign={"center"}
