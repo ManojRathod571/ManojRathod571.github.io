@@ -74,13 +74,18 @@ const HeroRightSection = () => {
         </Flex>
         <SocialMediaSection />
         <Flex justify={"center"} pt="2rem">
-          <Button
-            bg="white"
-            color="black"
-            rightIcon={<BsCloudArrowUpFill color="black" />}
+          <a
+            href="https://github.com/ManojRathod571/Resume/raw/main/Manoj_Rathod_Resume.pdf"
+            download={"Manoj-Rathod_Resume"}
           >
-            Resume
-          </Button>
+            <Button
+              bg="white"
+              color="black"
+              rightIcon={<BsCloudArrowUpFill color="black" />}
+            >
+              Resume
+            </Button>
+          </a>
         </Flex>
       </Box>
     </>

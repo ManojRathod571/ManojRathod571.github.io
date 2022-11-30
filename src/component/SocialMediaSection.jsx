@@ -38,7 +38,7 @@ const SocialMediaSection = () => {
           <GoMarkGithub fontSize="20px" color="black" />
         </Flex>
       </a>
-      <a>
+      <a href="https://mail.google.com/mail/u/0/#inbox?compose=new">
         <Flex
           w="35px"
           h="35px"
