@@ -56,97 +56,104 @@ const Contact = () => {
           boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
           borderRadius={{ lg: "10px" }}
           bg="white"
-          rowGap={{ base: "2rem", lg: "" }}
+          rowGap={{ base: "2rem", lg: "unset" }}
         >
-          <Box
-            bg="rgba(38,50,157,1)"
-            py="3rem"
-            px="1.5rem"
-            borderRadius={{ lg: "10px" }}
-          >
-            <Text
-              fontSize="25px"
-              fontFamily="Poppins"
-              fontWeight="500"
-              color="white"
-              textAlign="Left"
-              mb="1rem"
+          <Box bg="rgba(38,50,157,1)" py="3rem" borderRadius={{ lg: "10px" }}>
+            <Box
+              w={{ md: "70%", lg: "none" }}
+              m={{ md: "auto", lg: "none" }}
+              px={{ base: "1.5rem", md: "2rem", lg: "unset" }}
             >
-              Contact Information
-            </Text>
-            <Text
-              fontSize="16px"
-              fontFamily="Poppins"
-              fontWeight="400"
-              color="white"
-              textAlign="left"
-              mb="3rem"
-            >
-              Want to get in touch? I would love to connect with you! Here’s how
-              you can reach out to me
-            </Text>
-            <Flex mb="2rem">
-              <Box mr="1.5rem">
-                <MdAddIcCall fontSize="1.5rem" color="white" />
-              </Box>
+              <Text
+                fontSize="25px"
+                fontFamily="Poppins"
+                fontWeight="500"
+                color="white"
+                textAlign="Left"
+                mb="1rem"
+              >
+                Contact Information
+              </Text>
               <Text
                 fontSize="16px"
                 fontFamily="Poppins"
                 fontWeight="400"
                 color="white"
                 textAlign="left"
+                mb="3rem"
               >
-                +91-7028203637
+                Want to get in touch? I would love to connect with you! Here’s
+                how you can reach out to me
               </Text>
-            </Flex>
-            <Flex mb="2rem">
-              <Box mr="1.5rem">
-                <MdMail fontSize="1.5rem" color="white" />
-              </Box>
-              <Text
-                fontSize="16px"
-                fontFamily="Poppins"
-                fontWeight="400"
-                color="white"
-                textAlign="left"
+              <Flex mb="2rem">
+                <Box mr="1.5rem">
+                  <MdAddIcCall fontSize="1.5rem" color="white" />
+                </Box>
+                <Text
+                  fontSize="16px"
+                  fontFamily="Poppins"
+                  fontWeight="400"
+                  color="white"
+                  textAlign="left"
+                >
+                  +91-7028203637
+                </Text>
+              </Flex>
+              <Flex mb="2rem">
+                <Box mr="1.5rem">
+                  <MdMail fontSize="1.5rem" color="white" />
+                </Box>
+                <Text
+                  fontSize="16px"
+                  fontFamily="Poppins"
+                  fontWeight="400"
+                  color="white"
+                  textAlign="left"
+                >
+                  myraysever@gmail.com
+                </Text>
+              </Flex>
+              <Flex mb="3rem">
+                <Box mr="1.5rem">
+                  <MdLocationOn fontSize="1.8rem" color="white" />
+                </Box>
+                <Text
+                  fontSize="16px"
+                  fontFamily="Poppins"
+                  fontWeight="400"
+                  color="white"
+                  textAlign="left"
+                >
+                  Pune, Maharashtra
+                </Text>
+              </Flex>
+              <Flex
+                justify={{
+                  base: "space-evenly",
+                  md: "space-between",
+                  lg: "space-evenly",
+                }}
               >
-                myraysever@gmail.com
-              </Text>
-            </Flex>
-            <Flex mb="3rem">
-              <Box mr="1.5rem">
-                <MdLocationOn fontSize="1.8rem" color="white" />
-              </Box>
-              <Text
-                fontSize="16px"
-                fontFamily="Poppins"
-                fontWeight="400"
-                color="white"
-                textAlign="left"
-              >
-                Pune, Maharashtra
-              </Text>
-            </Flex>
-            <Flex justify="space-evenly">
-              <a href="https://www.linkedin.com/in/manoj-rathod-01943911a/">
-                {" "}
-                <BsLinkedin fontSize="1.6rem" color="white" />
-              </a>
-              <a href="https://github.com/ManojRathod571">
-                <GoMarkGithub fontSize="1.6rem" color="white" />
-              </a>
-              <a href="">
-                <CgMail fontSize="1.6rem" color="white" />
-              </a>
-              <a href="https://twitter.com/ManojRa65572407/media">
-                <IoLogoTwitter fontSize="1.6rem" color="white" />
-              </a>
-            </Flex>
+                <a href="https://www.linkedin.com/in/manoj-rathod-01943911a/">
+                  <BsLinkedin fontSize="1.6rem" color="white" />
+                </a>
+                <a href="https://github.com/ManojRathod571">
+                  <GoMarkGithub fontSize="1.6rem" color="white" />
+                </a>
+                <a href="">
+                  <CgMail fontSize="1.6rem" color="white" />
+                </a>
+                <a href="https://twitter.com/ManojRa65572407/media">
+                  <IoLogoTwitter fontSize="1.6rem" color="white" />
+                </a>
+              </Flex>
+            </Box>
           </Box>
           <Box
-            w={{ base: "85%", md: "", lg: "60%" }}
+            w={{ base: "85%", md: "80%", lg: "60%" }}
             m="auto"
-            pb={{ base: "1.5rem", lg: "none" }}
+            // h={{ base: "auto", lg: "70vh" }}
+            pb={{ base: "1.5rem", lg: "3rem" }}
           >
             <FormControl>
               <Box mb="1rem">
@@ -209,7 +216,7 @@ const Contact = () => {
                     title: "Form Submitted",
                     description: "Thank you for contact us",
                     status: "success",
-                    duration: 3000,
+                    duration: 1000,
                     isClosable: true,
                     position: "top-center",
                   })

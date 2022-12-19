@@ -108,19 +108,7 @@ export default function Navbar() {
               })}
             </Flex>
           </Box>
-          <Flex alignItems={"center"}>
-            {/* <Button onClick={toggleColorMode} bg="#6929c4">
-              {colorMode === "light" ? (
-                <MoonIcon
-                  color={colorMode === "light" ? "white" : "white"}
-                  bg={navbar ? null : "#6929c4"}
-                  _hover={{ bg: "teal.600" }}
-                />
-              ) : (
-                <SunIcon />
-              )}
-            </Button> */}
-          </Flex>
+          <Flex alignItems={"center"}></Flex>
         </Flex>
 
         {isOpen ? (
@@ -147,16 +135,16 @@ export default function Navbar() {
               {/* <a
                 href="https://github.com/ManojRathod571/Resume/raw/main/Manoj_Rathod_Resume.pdf"
                 download={"Manoj_Rathod_Resume.pdf"}
-              > */}
-              {/* <Text
-                color="red"
-                fontFamily="Poppins"
-                fontSize="18px"
-                zIndex={1200}
               >
-                Resume
-              </Text> */}
-              {/* </a> */}
+                <Text
+                  color="red"
+                  fontFamily="Poppins"
+                  fontSize="18px"
+                  zIndex={1200}
+                >
+                  Resume
+                </Text>
+              </a> */}
             </VStack>
           </VStack>
         ) : null}

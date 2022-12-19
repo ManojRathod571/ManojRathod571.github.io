@@ -49,11 +49,11 @@ const ProjectRightSection = ({
       <TechStack />
       <Flex justify={{ base: "space-between", lg: "start" }}>
         <Box pr={{ lg: "2rem" }}>
-          <a href={`${deployurl}`}>
+          <a href={`${deployurl}`} target="_blank">
             <LinkButton link="See This Live" />
           </a>
         </Box>
-        <a href={`${gitHibLink}`}>
+        <a href={`${gitHibLink}`} target="_blank">
           <LinkButton link="Github" />
         </a>
       </Flex>

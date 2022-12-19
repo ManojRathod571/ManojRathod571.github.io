@@ -1,7 +1,7 @@
 import { Box, Flex, Grid, Text, Image } from "@chakra-ui/react";
 import React from "react";
 import { FcAbout } from "react-icons/fc";
-import profile from "../Images/profile.02.jpg";
+import profile from "../Images/profile.jpg";
 import { motion } from "framer-motion";
 
 const About = () => {
@@ -50,13 +50,14 @@ const About = () => {
             >
               <Box>
                 <Image
-                  src={profile}
+                  // pt="5rem"
                   boxSize={{ base: "15rem", lg: "24rem" }}
-                  objectFit="cover"
+                  src={profile}
+                  objectFit="contain"
                   alt="profile"
-                  borderRadius={"50%"}
-                  // w={{ base: "", lg: "50%" }}
-                  // h={{ base: "", lg: "50%" }}
+                  borderRadius="50%"
+                  w={{ base: "", lg: "100%" }}
+                  // h={{ base: "", lg: "100%" }}
                 />
               </Box>
             </Flex>

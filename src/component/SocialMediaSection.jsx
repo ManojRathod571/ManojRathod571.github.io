@@ -14,7 +14,10 @@ const SocialMediaSection = () => {
       margin="auto"
       justify="space-around"
     >
-      <a href="https://www.linkedin.com/in/manoj-rathod-01943911a/">
+      <a
+        href="https://www.linkedin.com/in/manoj-rathod-01943911a/"
+        target="_blank"
+      >
         <Flex
           w="35px"
           h="35px"
@@ -26,7 +29,7 @@ const SocialMediaSection = () => {
           <BsLinkedin fontSize="18px" color="#1F51FF" />
         </Flex>
       </a>
-      <a href="https://github.com/ManojRathod571">
+      <a href="https://github.com/ManojRathod571" target="_blank">
         <Flex
           w="35px"
           h="35px"
@@ -38,7 +41,10 @@ const SocialMediaSection = () => {
           <GoMarkGithub fontSize="20px" color="black" />
         </Flex>
       </a>
-      <a href="https://mail.google.com/mail/u/0/#inbox?compose=new">
+      <a
+        href="https://mail.google.com/mail/u/0/#inbox?compose=new"
+        target="_blank"
+      >
         <Flex
           w="35px"
           h="35px"
@@ -50,7 +56,7 @@ const SocialMediaSection = () => {
           <CgMail fontSize="22px" color="#FFBF00" />
         </Flex>
       </a>
-      <a href="https://twitter.com/ManojRa65572407/media">
+      <a href="https://twitter.com/ManojRa65572407/media" target="_blank">
         <Flex
           w="35px"
           h="35px"
