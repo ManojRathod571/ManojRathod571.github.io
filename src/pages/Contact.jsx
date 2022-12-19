@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {
   Box,
   Grid,
@@ -25,16 +25,53 @@ import { GoMarkGithub } from "react-icons/go";
 import { CgMail } from "react-icons/cg";
 import { IoLogoTwitter } from "react-icons/io";
 
+import emailjs from "@emailjs/browser";
+
 const inputValues = {
-  name: "",
-  email: "",
+  user_name: "",
+  user_email: "",
   message: "",
 };
 const Contact = () => {
   const [input, setInput] = useState(inputValues);
 
-  const handleInputChange = (e) => {};
+  const handleInputChange = (e) => {
+    const value = e.target.value;
+    console.log(value);
+    setInput({ ...input, [e.target.name]: value });
+  };
+
+  console.log(input);
   const toast = useToast();
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_pwr4qqf",
+        "template_32cl9pg",
+        form.current,
+        "S0BnqZLTOCyEYyduB"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    setInput({
+      user_name: "",
+      user_email: "",
+      message: "",
+    });
+  };
+
   return (
     <Box bg="rgb(245, 245, 245)" id="contact">
       <Box w={{ lg: "70%" }} m="auto" py="4rem">
@@ -52,7 +89,7 @@ const Contact = () => {
         </Text>
         <Grid
           gridTemplateColumns={{ base: "1fr", md: "1fr", lg: "1fr 1.6fr" }}
-          h={{ base: "auto", lg: "70vh" }}
+          h={{ base: "auto", lg: "auto" }}
           boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
           borderRadius={{ lg: "10px" }}
           bg="white"
@@ -155,77 +192,86 @@ const Contact = () => {
             // h={{ base: "auto", lg: "70vh" }}
             pb={{ base: "1.5rem", lg: "3rem" }}
           >
-            <FormControl>
-              <Box mb="1rem">
-                <FormLabel fontFamily="Poppins" color="gray.700">
-                  Your Name
-                </FormLabel>
-                <InputGroup w="100%">
-                  <InputLeftElement
-                    pointerEvents="none"
-                    children={<MdDriveFileRenameOutline color="gray.800" />}
-                  />
-                  <Input
-                    type="text"
-                    placeholder="Enter your name"
-                    color="gray.700"
-                    required
+            <form ref={form} onSubmit={sendEmail}>
+              <FormControl>
+                <Box mb="1rem">
+                  <FormLabel fontFamily="Poppins" color="gray.700">
+                    Your Name
+                  </FormLabel>
+                  <InputGroup w="100%">
+                    <InputLeftElement
+                      pointerEvents="none"
+                      children={<MdDriveFileRenameOutline color="gray.800" />}
+                    />
+                    <Input
+                      type="text"
+                      placeholder="Enter your name"
+                      color="gray.700"
+                      name="user_name"
+                      value={input.user_name}
+                      required
+                      onChange={handleInputChange}
+                    />
+                  </InputGroup>
+                </Box>
+
+                <Box mb="1rem">
+                  <FormLabel fontFamily="Poppins" color="gray.700">
+                    Email
+                  </FormLabel>
+                  <InputGroup w="100%">
+                    <InputLeftElement
+                      pointerEvents="none"
+                      children={<MdMarkEmailUnread color="gray.800" />}
+                    />
+                    <Input
+                      type="text"
+                      placeholder="Enter your Email"
+                      color="gray.700"
+                      name="user_email"
+                      value={input.user_email}
+                      required
+                      onChange={handleInputChange}
+                    />
+                  </InputGroup>
+                </Box>
+
+                <Box mb="1rem">
+                  <FormLabel fontFamily="Poppins" color="gray.700">
+                    Message
+                  </FormLabel>
+
+                  <Textarea
+                    placeholder="Enter your message here"
+                    resize={"none"}
+                    name="message"
+                    value={input.message}
                     onChange={handleInputChange}
                   />
-                </InputGroup>
-              </Box>
-
-              <Box mb="1rem">
-                <FormLabel fontFamily="Poppins" color="gray.700">
-                  Email
-                </FormLabel>
-                <InputGroup w="100%">
-                  <InputLeftElement
-                    pointerEvents="none"
-                    children={<MdMarkEmailUnread color="gray.800" />}
-                  />
-                  <Input
-                    type="text"
-                    placeholder="Enter your Email"
-                    color="gray.700"
-                    required
-                    onChange={handleInputChange}
-                  />
-                </InputGroup>
-              </Box>
-
-              <Box mb="1rem">
-                <FormLabel fontFamily="Poppins" color="gray.700">
-                  Message
-                </FormLabel>
-
-                <Textarea
-                  placeholder="Enter your message here"
-                  resize={"none"}
-                />
-              </Box>
-              <Button
-                mt="4"
-                bg="#6929c4"
-                color="white"
-                type="submit"
-                w="100%"
-                mb="1rem"
-                onClick={() =>
-                  toast({
-                    title: "Form Submitted",
-                    description: "Thank you for contact us",
-                    status: "success",
-                    duration: 1000,
-                    isClosable: true,
-                    position: "top-center",
-                  })
-                }
-                _hover={{ bg: "#6929c4" }}
-              >
-                Send Your Message
-              </Button>
-            </FormControl>
+                </Box>
+                <Button
+                  mt="4"
+                  bg="#6929c4"
+                  color="white"
+                  type="submit"
+                  w="100%"
+                  mb="1rem"
+                  onClick={() => {
+                    toast({
+                      title: "Form Submitted",
+                      description: "Thank you for contact us",
+                      status: "success",
+                      duration: 1000,
+                      isClosable: true,
+                      position: "top-center",
+                    });
+                  }}
+                  _hover={{ bg: "#6929c4" }}
+                >
+                  Send Your Message
+                </Button>
+              </FormControl>
+            </form>
           </Box>
         </Grid>
       </Box>
