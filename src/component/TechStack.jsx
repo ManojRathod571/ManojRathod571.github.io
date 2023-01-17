@@ -7,9 +7,8 @@ import { SiRedux } from "react-icons/si";
 import { SiChakraui } from "react-icons/si";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoHtml5 } from "react-icons/io";
-// import { IoLogoJavascript } from "react-icons/io";
 
-const TechStack = () => {
+const TechStack = ({ tech }) => {
   return (
     <Box>
       <Flex align={"center"} mb="1rem">
@@ -30,94 +29,21 @@ const TechStack = () => {
         justifyContent={{ base: "space-evenly", lg: "space-between" }}
         mb="1.5rem"
       >
-        <Flex>
-          <Box pr={{ base: ".3rem", lg: "1rem" }}>
-            <FaReact color="#001141" fontSize={{ base: "18px", lg: "22px" }} />
-          </Box>
-          <Text
-            fontSize={{ base: "13px", md: "", lg: "16px" }}
-            fontWeight={{ base: "400", lg: "500" }}
-            fontFamily="Poppins"
-            color="rgba(56,49,68,.8)"
-          >
-            React
-          </Text>
-        </Flex>
-
-        <Flex>
-          <Box pr={{ base: ".3rem", lg: "1rem" }}>
-            <SiRedux color="#001141" fontSize={{ base: "18px", lg: "22px" }} />
-          </Box>
-          <Text
-            fontSize={{ base: "13px", md: "", lg: "16px" }}
-            fontWeight={{ base: "400", lg: "500" }}
-            fontFamily="Poppins"
-            color="rgba(56,49,68,.8)"
-          >
-            Redux
-          </Text>
-        </Flex>
-        <Flex>
-          <Box pr={{ base: ".3rem", lg: "1rem" }}>
-            <FaCss3Alt
-              color="#001141"
-              fontSize={{ base: "18px", lg: "22px" }}
-            />
-          </Box>
-          <Text
-            fontSize={{ base: "13px", md: "", lg: "16px" }}
-            fontWeight={{ base: "400", lg: "500" }}
-            fontFamily="Poppins"
-            color="rgba(56,49,68,.8)"
-          >
-            CSS
-          </Text>
-        </Flex>
-        <Flex>
-          <Box pr={{ base: ".3rem", lg: "1rem" }}>
-            <IoLogoHtml5
-              color="#001141"
-              fontSize={{ base: "18px", lg: "22px" }}
-            />
-          </Box>
-          <Text
-            fontSize={{ base: "13px", md: "", lg: "16px" }}
-            fontWeight={{ base: "400", lg: "500" }}
-            fontFamily="Poppins"
-            color="rgba(56,49,68,.8)"
-          >
-            HTML
-          </Text>
-        </Flex>
-        {/* <Flex>
-          <Box pr={{ base: ".3rem", lg: "1rem" }}>
-            <IoLogoJavascript color="#001141" fontSize={{ base: "18px", lg: "22px" }} />
-          </Box>
-          <Text
-           fontSize={{ base: "13px", md: "", lg: "16px" }}
-            fontWeight={{ base: "400", lg: "500" }}
-            fontFamily="Poppins"
-            color="rgba(56,49,68,.8)"
-          >
-            JavaScript
-          </Text>
-        </Flex> */}
-        <Flex>
-          <Box pr={{ base: ".3rem", lg: "1rem" }}>
-            <SiChakraui
-              color="#001141"
-              fontSize={{ base: "18px", lg: "22px" }}
-            />
-          </Box>
-          <Text
-            fontSize={{ base: "13px", md: "", lg: "16px" }}
-            fontWeight={{ base: "400", lg: "500" }}
-            fontFamily="Poppins"
-            color="rgba(56,49,68,.8)"
-          >
-            Chakra UI
-          </Text>
-        </Flex>
+        {tech.map(({ id, icon, tech }) => {
+          return (
+            <Flex key={id}>
+              <Box pr={{ base: ".3rem", lg: "1rem" }}>{icon}</Box>
+              <Text
+                fontSize={{ base: "13px", md: "", lg: "13px" }}
+                fontWeight={{ base: "400", lg: "500" }}
+                fontFamily="Poppins"
+                color="rgba(56,49,68,.8)"
+              >
+                {tech}
+              </Text>
+            </Flex>
+          );
+        })}
       </Flex>
     </Box>
   );

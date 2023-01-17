@@ -1,6 +1,6 @@
 import { Box, Image, Grid, Flex } from "@chakra-ui/react";
 
-const ProjectLeftSection = ({ FoodApp }) => {
+const ProjectLeftSection = ({ Images }) => {
   return (
     <Box
       w="100%"
@@ -16,7 +16,7 @@ const ProjectLeftSection = ({ FoodApp }) => {
       zIndex={20}
     >
       <Grid gridTemplateColumns="1fr 1fr" gap={2}>
-        {FoodApp.map(({ img, id }) => {
+        {Images.map(({ img, id }) => {
           return (
             <Box key={id} w="100%">
               <Image src={img} alt={id} h="100%" w="100%" objectFit={"cover"} />

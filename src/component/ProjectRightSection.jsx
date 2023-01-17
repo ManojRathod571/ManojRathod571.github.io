@@ -11,9 +11,10 @@ const ProjectRightSection = ({
   duaration,
   deployurl,
   gitHibLink,
+  tech,
 }) => {
   return (
-    <Box mb="5rem" zIndex={20} w="100%" m={{ base: "auto", lg: "none" }}>
+    <Box mb="5rem" zIndex={1200} w="100%" m={{ base: "auto", lg: "none" }}>
       <Text
         fontSize="30px"
         fontFamily="Poppins"
@@ -46,7 +47,7 @@ const ProjectRightSection = ({
         </Text>
       </Flex>
       {/* Tech Stack */}
-      <TechStack />
+      <TechStack tech={tech} />
       <Flex justify={{ base: "space-between", lg: "start" }}>
         <Box pr={{ lg: "2rem" }}>
           <a href={`${deployurl}`} target="_blank">

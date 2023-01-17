@@ -37,7 +37,7 @@ const Contact = () => {
 
   const handleInputChange = (e) => {
     const value = e.target.value;
-    console.log(value);
+    // console.log(value);
     setInput({ ...input, [e.target.name]: value });
   };
 
@@ -49,6 +49,28 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    if (
+      input.user_email == "" ||
+      input.user_name == " " ||
+      input.message == " "
+    ) {
+      toast({
+        title: "Please fill all tha fields",
+        status: "success",
+        duration: 1000,
+        isClosable: true,
+        position: "top-center",
+      });
+    } else {
+      toast({
+        title: "Form is Submitted",
+        description: "Thank you for contact us",
+        status: "success",
+        duration: 1000,
+        isClosable: true,
+        position: "top-center",
+      });
+    }
     emailjs
       .sendForm(
         "service_pwr4qqf",
@@ -256,16 +278,16 @@ const Contact = () => {
                   type="submit"
                   w="100%"
                   mb="1rem"
-                  onClick={() => {
-                    toast({
-                      title: "Form Submitted",
-                      description: "Thank you for contact us",
-                      status: "success",
-                      duration: 1000,
-                      isClosable: true,
-                      position: "top-center",
-                    });
-                  }}
+                  // onClick={() => {
+                  //   toast({
+                  //     title: "Form Submitted",
+                  //     description: "Thank you for contact us",
+                  //     status: "success",
+                  //     duration: 1000,
+                  //     isClosable: true,
+                  //     position: "top-center",
+                  //   });
+                  // }}
                   _hover={{ bg: "#6929c4" }}
                 >
                   Send Your Message

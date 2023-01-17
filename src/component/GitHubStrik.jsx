@@ -21,7 +21,7 @@ const Stats = () => {
       </Box>
       <Box w="100%">
         <Image
-          src="https://github-readme-stats.vercel.app/api/top-langs/?username=ManojRathod571&layout=compact&theme=nord&hide_border=true&border_radius=30"
+          src="https://github-readme-stats.vercel.app/api"
           w="100%"
         />
       </Box>
